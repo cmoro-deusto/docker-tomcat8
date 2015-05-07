@@ -1,5 +1,7 @@
-docker-tomcat8
-==============
+docker-tomcat
+=============
+
+[![dockeri.co](http://dockeri.co/image/dordoka/docker-tomcat)](https://registry.hub.docker.com/u/dordoka/docker-tomcat/)
 
 Ubuntu 14.04, Oracle JDK 8 and Tomcat 8 based docker container.
 
