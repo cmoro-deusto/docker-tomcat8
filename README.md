@@ -36,9 +36,9 @@ sudo docker run -d -p 8080:8080 -p 8009:8009 -v /opt/tomcat/webapps:/opt/tomcat/
 ```
 Remember to change `/opt/tomcat/webapps` to the directory where your app is stored.
 
-## Using fig
-If you have `fig.sh` installed, you can just launch:
+## Using docker compose
+If you have `docker-compose` installed, you can just launch:
 ```
-sudo fig run tomcat
+sudo docker-compose up
 ```
 

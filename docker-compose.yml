@@ -1,5 +1,5 @@
 tomcat:
-  image: dordoka/tomcat8
+  image: dordoka/tomcat
   ports:
   - "8080:8080"
   - "9009:8009"
