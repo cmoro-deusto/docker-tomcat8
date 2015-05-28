@@ -11,7 +11,7 @@ You should run this container on the background and mount the volume with your w
 Includes:
 
  - Oracle JDK 1.8.45
- - Tomcat 8.0.21
+ - Tomcat 8.0.23
  - Git, wget, curl, build-essential
  
 ## Volumes
@@ -40,6 +40,7 @@ Remember to change `/opt/tomcat/webapps` to the directory where your app is stor
 
 ## Using docker compose
 If you have `docker-compose` installed, you can just launch:
+
 ```
 sudo docker-compose up
 ```
