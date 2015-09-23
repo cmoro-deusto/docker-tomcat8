@@ -10,8 +10,8 @@ You should run this container on the background and mount the volume with your w
 
 Includes:
 
- - Oracle JDK 1.8.45
- - Tomcat 8.0.23
+ - Oracle JDK 1.8.60
+ - Tomcat 8.0.24
  - Git, wget, curl, build-essential
  
 ## Volumes
@@ -34,7 +34,7 @@ Remember to map the ports to the docker host on run.
 You need docker v1.3+ installed. To get the container up and running, run:
  
 ```
-sudo docker run -d -p 8080:8080 -p 8009:8009 -v /opt/tomcat/webapps:/opt/tomcat/webapps dordoka/tomcat8
+sudo docker run -d -p 8080:8080 -p 8009:8009 -v /opt/tomcat/webapps:/opt/tomcat/webapps dordoka/tomcat
 ```
 Remember to change `/opt/tomcat/webapps` to the directory where your app is stored.
 
