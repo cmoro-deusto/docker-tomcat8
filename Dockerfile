@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 
 MAINTAINER Carlos Moro <cmoro@deusto.es>
 
-ENV TOMCAT_VERSION 8.0.26
+ENV TOMCAT_VERSION 8.0.28
 
 # Set locales
 RUN locale-gen en_GB.UTF-8
@@ -13,8 +13,8 @@ ENV LC_CTYPE en_GB.UTF-8
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 # Install dependencies
-RUN apt-get update
-RUN apt-get install -y git build-essential curl wget software-properties-common
+RUN apt-get update && \
+apt-get install -y git build-essential curl wget software-properties-common
 
 # Install JDK 8
 RUN \
@@ -29,17 +29,13 @@ rm -rf /var/cache/oracle-jdk8-installer
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 # Get Tomcat
-RUN wget --quiet --no-cookies http://apache.rediris.es/tomcat/tomcat-8/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz -O /tmp/tomcat.tgz
-
-# Uncompress
-RUN tar xzvf /tmp/tomcat.tgz -C /opt
-RUN mv /opt/apache-tomcat-${TOMCAT_VERSION} /opt/tomcat
-RUN rm /tmp/tomcat.tgz
-
-# Remove garbage
-RUN rm -rf /opt/tomcat/webapps/examples
-RUN rm -rf /opt/tomcat/webapps/docs
-RUN rm -rf /opt/tomcat/webapps/ROOT
+RUN wget --quiet --no-cookies http://apache.rediris.es/tomcat/tomcat-8/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz -O /tmp/tomcat.tgz && \
+tar xzvf /tmp/tomcat.tgz -C /opt && \
+mv /opt/apache-tomcat-${TOMCAT_VERSION} /opt/tomcat && \
+rm /tmp/tomcat.tgz && \
+rm -rf /opt/tomcat/webapps/examples && \
+rm -rf /opt/tomcat/webapps/docs && \
+rm -rf /opt/tomcat/webapps/ROOT
 
 # Add admin/admin user
 ADD tomcat-users.xml /opt/tomcat/conf/
