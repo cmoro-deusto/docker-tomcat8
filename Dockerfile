@@ -14,7 +14,7 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 # Install dependencies
 RUN apt-get update && \
-apt-get install -y git build-essential curl vim wget software-properties-common
+apt-get install -y git build-essential curl vim nano wget software-properties-common
 
 # Install JDK 7
 RUN \
