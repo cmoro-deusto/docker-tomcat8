@@ -1,4 +1,4 @@
-docker-tomcat based of cmoro-deusto/docker-tomcat8
+docker-tomcat based of dordoka/tomcat
 =============
 
 [![dockeri.co](http://dockeri.co/image/dordoka/tomcat)](https://registry.hub.docker.com/u/dordoka/tomcat/)
