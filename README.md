@@ -1,9 +1,9 @@
-docker-tomcat
+docker-tomcat based of cmoro-deusto/docker-tomcat8
 =============
 
 [![dockeri.co](http://dockeri.co/image/dordoka/tomcat)](https://registry.hub.docker.com/u/dordoka/tomcat/)
 
-Ubuntu 14.04, Oracle JDK 8 and Tomcat 8 based docker container.
+Ubuntu 14.04, Oracle JDK 7 and Tomcat 8 based docker container.
 
 # Description
 You should run this container on the background and mount the volume with your web app inside.
@@ -34,7 +34,7 @@ Remember to map the ports to the docker host on run.
 You need docker v1.3+ installed. To get the container up and running, run:
  
 ```
-sudo docker run -d -p 8080:8080 -p 8009:8009 -v /opt/tomcat/webapps:/opt/tomcat/webapps dordoka/tomcat
+sudo docker run -d -p 8080:8080 -p 8009:8009 -v /opt/tomcat/webapps:/opt/tomcat/webapps intartif/docker-tomcat8
 ```
 Remember to change `/opt/tomcat/webapps` to the directory where your app is stored.
 
