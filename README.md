@@ -37,11 +37,3 @@ You need docker v1.3+ installed. To get the container up and running, run:
 sudo docker run -d -p 8080:8080 -p 8009:8009 -v /opt/tomcat/webapps:/opt/tomcat/webapps intartif/docker-tomcat8
 ```
 Remember to change `/opt/tomcat/webapps` to the directory where your app is stored.
-
-## Using docker compose
-If you have `docker-compose` installed, you can just launch:
-
-```
-sudo docker-compose up
-```
-
