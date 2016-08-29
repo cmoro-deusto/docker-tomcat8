@@ -1,6 +1,12 @@
 docker-tomcat
 =============
 
+
+[![](https://images.microbadger.com/badges/version/dordoka/tomcat.svg)](http://microbadger.com/images/dordoka/tomcat "Get your own version badge on microbadger.com")
+
+[![](https://images.microbadger.com/badges/image/dordoka/tomcat.svg)](http://microbadger.com/images/dordoka/tomcat "Get your own image badge on microbadger.com")
+
+
 [![dockeri.co](http://dockeri.co/image/dordoka/tomcat)](https://registry.hub.docker.com/u/dordoka/tomcat/)
 
 Ubuntu 14.04, Oracle JDK 8 and Tomcat 8 based docker container.
