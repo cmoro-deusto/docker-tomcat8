@@ -51,3 +51,6 @@ If you have `docker-compose` installed, you can just launch:
 sudo docker-compose up
 ```
 
+## A warning regarding admin user for tomcat management console
+Please note that the image contains a `tomcat-users.xml` file, including an `admin` user (password `admin`). For the time being, should you wish to change that, fork this repo and modify the xml file accordingly.
+
