@@ -1,6 +1,7 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 
-MAINTAINER Carlos Moro <cmoro@deusto.es>
+#Forked from maintainer Carlos Moro
+MAINTAINER Nicolae Rosu <nrosu@pentalog.fr>
 
 ENV TOMCAT_VERSION 8.0.39
 
