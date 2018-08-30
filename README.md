@@ -16,8 +16,8 @@ You should run this container on the background and mount the volume with your w
 
 Includes:
 
- - Oracle JDK 1.8.161
- - Tomcat 8.0.49
+ - Oracle JDK 1.8.181
+ - Tomcat 8.0.53
  - Git, wget, curl, build-essential
  
 ## Volumes
