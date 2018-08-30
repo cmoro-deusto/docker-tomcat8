@@ -9,7 +9,7 @@ docker-tomcat
 
 [![dockeri.co](http://dockeri.co/image/dordoka/tomcat)](https://registry.hub.docker.com/u/dordoka/tomcat/)
 
-Ubuntu 14.04, Oracle JDK 8 and Tomcat 8 based docker container.
+Ubuntu 14.04/16.04, Oracle JDK 8 and Tomcat 8 based docker container.
 
 # Description
 You should run this container on the background and mount the volume with your web app inside.
@@ -20,6 +20,8 @@ Includes:
  - Tomcat 8.0.53
  - Git, wget, curl, build-essential
  
+The ```latest``` tag is based on Ubuntu 14.04. Should you prefer Ubuntu 16.04, please use the ```xenial``` tag.
+
 ## Volumes
 Exports a volume on `/opt/tomcat/webapps`.
 You can mount the volume on run to a local directory containing your war file or exploded war directory.
@@ -43,6 +45,12 @@ You need docker v1.3+ installed. To get the container up and running, run:
 sudo docker run -d -p 8080:8080 -p 8009:8009 -v /opt/tomcat/webapps:/opt/tomcat/webapps dordoka/tomcat
 ```
 Remember to change `/opt/tomcat/webapps` to the directory where your app is stored.
+
+If you prefer the Ubuntu 16.04 based image instead of the default 14.04 one, just use the ```xenial``` tag:
+
+```
+sudo docker run -d -p 8080:8080 -p 8009:8009 -v /opt/tomcat/webapps:/opt/tomcat/webapps dordoka/tomcat:xenial
+```
 
 ## Using docker compose
 If you have `docker-compose` installed, you can just launch:
