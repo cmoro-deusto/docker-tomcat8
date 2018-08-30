@@ -12,7 +12,7 @@ docker-tomcat
 Ubuntu 14.04/16.04, Oracle JDK 8 and Tomcat 8 based docker container.
 
 # Description
-You should run this container on the background and mount the volume with your web app inside.
+You should run this container in the background and mount the volume with your web app inside.
 
 Includes:
 
