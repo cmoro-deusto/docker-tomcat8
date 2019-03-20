@@ -16,11 +16,18 @@ You should run this container in the background and mount the volume with your w
 
 Includes:
 
- - Oracle JDK 1.8.201
+ - Oracle JDK 1.8u201
  - Tomcat 8.0.53
  - Git, wget, curl, build-essential
  
 The ```latest``` tag is based on Ubuntu 14.04. Should you prefer Ubuntu 16.04, please use the ```xenial``` tag.
+
+There's also a ```tomcat8.5``` tag, which includes:
+
+  - Ubuntu 16.04 Xenial based only
+  - Oracle JDK 1.8u201
+  - Tomcat 8.5.39
+  - Git, wget, curl, build-essential
 
 ## Volumes
 Exports a volume on `/opt/tomcat/webapps`.
