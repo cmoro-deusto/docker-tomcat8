@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 MAINTAINER Carlos Moro <cmoro@deusto.es>
 
-ENV TOMCAT_VERSION 8.0.53
+ENV TOMCAT_VERSION 8.5.39
 
 # Set locales
 RUN apt-get update && \
