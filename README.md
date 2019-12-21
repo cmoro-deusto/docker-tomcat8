@@ -9,18 +9,24 @@ docker-tomcat
 
 [![dockeri.co](http://dockeri.co/image/dordoka/tomcat)](https://registry.hub.docker.com/u/dordoka/tomcat/)
 
-Ubuntu 14.04/16.04, Oracle JDK 8 and Tomcat 8 based docker container.
+Ubuntu 18.04, OpenJDK 11 and Tomcat 8.5 tag available. 
+
+Includes:
+
+  - Ubuntu 18.04 Bionic
+  - OpenJDK 11
+  - Tomcat 8.5.50
+  - git, wget, curl, build-essential
+
+Old tags based on Oracle JDK 8 will no longer be updated due to Oracle changing licensing.
+
+IMPORTANT: In a future update, the latest tag will be changed and will yield bionic-8.5-openjdk11. So if you depend on latest, please change that and
+use an specific tag instead.
 
 # Description
 You should run this container in the background and mount the volume with your web app inside.
 
-Includes:
-
- - Oracle JDK 1.8u201
- - Tomcat 8.0.53
- - Git, wget, curl, build-essential
- 
-The ```latest``` tag is based on Ubuntu 14.04. Should you prefer Ubuntu 16.04, please use the ```xenial``` tag.
+The ```latest``` tag is based on Ubuntu 14.04. Should you prefer Ubuntu 16.04, please use the ```xenial``` tag. For Ubuntu 18.04 and OpenJDK11, use the ```bionic-8.5-openjdk11```.
 
 There's also a ```tomcat8.5``` tag, which includes:
 
@@ -58,6 +64,8 @@ If you prefer the Ubuntu 16.04 based image instead of the default 14.04 one, jus
 ```
 sudo docker run -d -p 8080:8080 -p 8009:8009 -v /opt/tomcat/webapps:/opt/tomcat/webapps dordoka/tomcat:xenial
 ```
+
+For Ubuntu 18.04 and OpenJDK11, use the ```bionic-8.5-openjdk11```
 
 ## Using docker compose
 If you have `docker-compose` installed, you can just launch:

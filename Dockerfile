@@ -1,8 +1,8 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 MAINTAINER Carlos Moro <cmoro@deusto.es>
 
-ENV TOMCAT_VERSION 8.0.53
+ENV TOMCAT_VERSION 8.5.50
 
 # Set locales
 RUN apt-get update && \
@@ -18,17 +18,15 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 RUN apt-get update && \
 apt-get install -y git build-essential curl wget software-properties-common
 
-# Install JDK 8
+# Install OpenJDK 12
 RUN \
-echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
-add-apt-repository -y ppa:webupd8team/java && \
+add-apt-repository -y ppa:openjdk-r/ppa && \
 apt-get update && \
-apt-get install -y oracle-java8-installer wget unzip tar && \
-rm -rf /var/lib/apt/lists/* && \
-rm -rf /var/cache/oracle-jdk8-installer
+apt-get install -y openjdk-11-jdk wget unzip tar && \
+rm -rf /var/lib/apt/lists/*
 
 # Define commonly used JAVA_HOME variable
-ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
+ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64/
 
 # Get Tomcat
 RUN wget --quiet --no-cookies https://archive.apache.org/dist/tomcat/tomcat-8/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz -O /tmp/tomcat.tgz && \
